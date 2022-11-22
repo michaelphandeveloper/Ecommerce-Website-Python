@@ -1,4 +1,6 @@
 from django.db import models
+
+from django.db import models
 from category.models import Category
 class Course(models.Model):
     code = models.CharField(max_length=10)
