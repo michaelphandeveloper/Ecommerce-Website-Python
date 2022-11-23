@@ -47,6 +47,8 @@ class Size(models.Model):
     def __str__(self):
         return self.title
 
+# Material
+
 class Material(models.Model):
     title = models.CharField(max_length=50)
 
