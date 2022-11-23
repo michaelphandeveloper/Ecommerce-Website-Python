@@ -4,7 +4,7 @@ from django.db import models
 
 class Category(models.Model):
     title = models.CharField(max_length=50)
-    image = models.ImageField(upload_to="category_imgs/")
+    #image = models.ImageField(upload_to="category_imgs/")
 
     class Meta:
         db_table = "Category"
@@ -16,7 +16,7 @@ class Category(models.Model):
 
 class Brand(models.Model):
     title = models.CharField(max_length=50)
-    image = models.ImageField(upload_to="brand_imgs/")
+    #image = models.ImageField(upload_to="brand_imgs/")
 
     class Meta:
         db_table = "Brand"
@@ -47,13 +47,11 @@ class Size(models.Model):
     def __str__(self):
         return self.title
 
-# Price
-
-class Price(models.Model):
-    title = models.FloatField(max_length=20)
+class Material(models.Model):
+    title = models.CharField(max_length=50)
 
     class Meta:
-        db_table = "Price"
-
+        db_table = "Material"
+    
     def __str__(self):
         return self.title
