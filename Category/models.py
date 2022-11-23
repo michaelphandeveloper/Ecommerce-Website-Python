@@ -4,7 +4,7 @@ from django.db import models
 
 class Category(models.Model):
     title = models.CharField(max_length=50)
-    #image = models.ImageField(upload_to="category_imgs/")
+    image = models.ImageField(null=True)
 
     class Meta:
         db_table = "Category"
@@ -16,7 +16,7 @@ class Category(models.Model):
 
 class Brand(models.Model):
     title = models.CharField(max_length=50)
-    #image = models.ImageField(upload_to="brand_imgs/")
+    image = models.ImageField(null=True)
 
     class Meta:
         db_table = "Brand"
