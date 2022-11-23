@@ -1,15 +1,19 @@
 from django.db import models
-from .models import Category
+from Category.models import Category
+from Category.models import Brand
+from Category.models import Color
+from Category.models import Size
+from Category.models import Material
 
 # Product
 class Product(models.Model):
     image = models.ImageField()
     details = models.TextField()
     category = models.ForeignKey(Category,on_delete=models.CASCADE)
-    brand = models.ForeignKey(Category,on_delete=models.CASCADE)
-    color = models.ForeignKey(Category,on_delete=models.CASCADE)
-    size = models.ForeignKey(Category,on_delete=models.CASCADE)
-    materials = models.ForeignKey(Category,on_delete=models.CASCADE)
+    brand = models.ForeignKey(Brand,on_delete=models.CASCADE)
+    color = models.ForeignKey(Color,on_delete=models.CASCADE)
+    size = models.ForeignKey(Size,on_delete=models.CASCADE)
+    materials = models.ForeignKey(Material,on_delete=models.CASCADE)
 
     class Meta:
         db_table = "Product"
