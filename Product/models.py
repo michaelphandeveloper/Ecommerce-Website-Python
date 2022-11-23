@@ -1,13 +1,9 @@
 from django.db import models
-from Category.models import Category
-from Category.models import Brand
-from Category.models import Color
-from Category.models import Size
-from Category.models import Material
+from .models import Category, Brand, Color, Size, Material
 
 # Product
 class Product(models.Model):
-    image = models.ImageField()
+    image = models.ImageField(upload_to="product_imgs/")
     details = models.TextField()
     category = models.ForeignKey(Category,on_delete=models.CASCADE)
     brand = models.ForeignKey(Brand,on_delete=models.CASCADE)
