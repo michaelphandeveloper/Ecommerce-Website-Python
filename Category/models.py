@@ -16,7 +16,7 @@ class Category(models.Model):
 
 class Brand(models.Model):
     title = models.CharField(max_length=50)
-    image = models.ImageField(null=True)
+    image = models.ImageField(upload_to="brands_imgs/")
 
     class Meta:
         db_table = "Brand"
