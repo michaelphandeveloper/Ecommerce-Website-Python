@@ -1,6 +1,11 @@
 from django.db import models
 
-#Category
+# Banner
+class Banner(models.Model):
+    img = models.CharField(max_length=50)
+    alt_text = models.CharField(max_length=75)
+    
+# Category
 
 class Category(models.Model):
     title = models.CharField(max_length=50)
