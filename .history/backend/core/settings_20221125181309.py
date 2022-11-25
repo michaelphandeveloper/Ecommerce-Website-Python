@@ -29,6 +29,8 @@ INSTALLED_APPS = [
     'Category',
     'Product',
     'User',
+    'frontend',
+    'backend',
 ]
 
 MIDDLEWARE = [

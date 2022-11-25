@@ -29,6 +29,7 @@ INSTALLED_APPS = [
     'Category',
     'Product',
     'User',
+    'index.html'
 ]
 
 MIDDLEWARE = [
