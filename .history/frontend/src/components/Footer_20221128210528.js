@@ -6,7 +6,7 @@ function Footer() {
 		<footer>
 			<Container>
 				<Row>
-					<Col className="text-center py-3">© 2022 Áo Thun Cao Cấp. Tất cả các quyền được bảo lưu.</Col>
+					<Col>© 2022 Áo Thun Cao Cấp. Tất cả các quyền được bảo lưu.</Col>
 				</Row>
 			</Container>
 		</footer>

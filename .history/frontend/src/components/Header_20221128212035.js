@@ -13,9 +13,7 @@ function Header() {
 							<Nav.Link href="/cart">
 								<i className="fas fa-shopping-cart"></i>Giỏ Hàng
 							</Nav.Link>
-							<Nav.Link href="/login">
-								<i className="fas fa-user"></i>Đăng Nhập
-							</Nav.Link>
+							<Nav.Link href="/login">Đăng Nhập</Nav.Link>
 						</Nav>
 					</Navbar.Collapse>
 				</Container>
