@@ -1,0 +1,8 @@
+{
+	"devDependencies": {
+		"prettier": "^2.8.0"
+	},
+	"dependencies": {
+		"react-bootstrap": "^2.6.0"
+	}
+}
