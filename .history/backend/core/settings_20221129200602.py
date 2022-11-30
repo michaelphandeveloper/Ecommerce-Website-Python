@@ -14,7 +14,6 @@ SECRET_KEY = 'django-insecure-k+f(3nic8^6()aa325g+4^9bd$t(uf#=f1c_w*3wwm&fo49z9=
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-
 ALLOWED_HOSTS = []
 
 
@@ -30,6 +29,7 @@ INSTALLED_APPS = [
     'Category',
     'Product',
     'User',
+    'frontend',
 ]
 
 MIDDLEWARE = [
@@ -69,7 +69,7 @@ WSGI_APPLICATION = 'core.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': str(BASE_DIR / 'db.sqlite3'),
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
@@ -108,7 +108,8 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_URL = 'static/'
+
 
 #Frontend Directory
 STATICFILES_DIRS = [

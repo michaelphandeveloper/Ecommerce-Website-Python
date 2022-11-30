@@ -12,8 +12,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-k+f(3nic8^6()aa325g+4^9bd$t(uf#=f1c_w*3wwm&fo49z9='
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
+DEBUG = False
 
 ALLOWED_HOSTS = []
 
@@ -47,7 +46,7 @@ ROOT_URLCONF = 'core.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'frontend/build')],
+        'DIRS': [os.path.join(BASE_DIR, 'frontend', 'build')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -69,7 +68,7 @@ WSGI_APPLICATION = 'core.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': str(BASE_DIR / 'db.sqlite3'),
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
@@ -112,7 +111,7 @@ STATIC_URL = '/static/'
 
 #Frontend Directory
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'frontend/build/static')    
+    os.path.join(BASE_DIR, 'frontend', 'build', 'static')
 ]
 
 # Default primary key field type
