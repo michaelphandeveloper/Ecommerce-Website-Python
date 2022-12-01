@@ -11,10 +11,10 @@
       <table class="table">
         <tr>
           <th>
-            <h5>Items: <strong>{{order.get_cart_items}}</strong></h5>
+            <h5>Items: <strong>3</strong></h5>
           </th>
           <th>
-            <h5>Total:<strong> ${{order.get_cart_total}}</strong></h5>
+            <h5>Total:<strong> $42</strong></h5>
           </th>
           <th>
             <a
@@ -41,7 +41,7 @@
       {% for item in items %}
       <div class="cart-row">
         <div style="flex: 2">
-          <img class="row-image" src="{{item.product.image.url}}" />
+          <img class="row-image" src="{{item,product.image.url}}" />
         </div>
         <div style="flex: 2"><p>{{item.product.name}}</p></div>
         <div style="flex: 1"><p>${{item.product.price|floatformat:2}}</p></div>
@@ -59,7 +59,7 @@
             />
           </div>
         </div>
-        <div style="flex: 1"><p>${{item.get_total}}</p></div>
+        <div style="flex: 1"><p>$32</p></div>
       </div>
       {% endfor %}
     </div>
