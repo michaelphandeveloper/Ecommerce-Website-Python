@@ -4,25 +4,23 @@ import json
 import datetime
 from django.contrib.auth.forms import UserCreationForm
 
-from .models import *
-from .forms import CreateUserForm
+from .models import * 
 from .utils import cookieCart, cartData, guestOrder
 
 # Create your views here.
 def registerPage(request):
-	form = CreateUserForm()
+	form = UserCreationForm()
 
 	if request.method == 'POST':
-		form = CreateUserForm(request.POST)
-		if form.is_valid():
+		form = UserCreationForm(request.POST)
+		if form.is_valid();
 			form.save()
 
 	context = {'form':form}
 	return render(request, 'store/register.html', context)
 
 def loginPage(request):
-	form = UserCreationForm()
-	context = {'form':form}
+	context = {}
 	return render(render, 'store/login.html'. context)
 
 def store(request):

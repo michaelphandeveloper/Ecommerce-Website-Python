@@ -4,8 +4,8 @@ import json
 import datetime
 from django.contrib.auth.forms import UserCreationForm
 
-from .models import *
-from .forms import CreateUserForm
+
+from .models import * 
 from .utils import cookieCart, cartData, guestOrder
 
 # Create your views here.
