@@ -1,10 +1,8 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render
 from django.http import JsonResponse
 import json
 import datetime
 from django.contrib.auth.forms import UserCreationForm
-
-from django.contrib import messages
 
 from .models import *
 from .forms import CreateUserForm
@@ -18,18 +16,17 @@ def registerPage(request):
 		form = CreateUserForm(request.POST)
 		if form.is_valid():
 			form.save()
-			user = form.cleaned_data.get('username')
-			messages.success(request, 'Account was created for ' + user)
-
-
-			return redirect('login')
 
 	context = {'form':form}
 	return render(request, 'store/register.html', context)
 
 def loginPage(request):
-	context = {}
-	return render(request, 'store/login.html', context)
+	form = UserCreationForm()
+	context = {
+		'full_url' : obj.full_url,
+		'short_url' : obj.short_url
+	}
+	return render(render, 'store/login.html', context)
 
 def store(request):
 	data = cartData(request)

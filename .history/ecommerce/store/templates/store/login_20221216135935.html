@@ -92,7 +92,6 @@
           </div>
           <div class="d-flex justify-content-center form_container">
             <form method="POST" action="">
-              {% csrf_token %}
               <div class="input-group mb-3">
                 <div class="input-group-append">
                   <span class="input-group-text"
@@ -102,7 +101,7 @@
                 <input
                   type="text"
                   name="username"
-                  placeholder="Username"
+                  placeholder="Username..."
                   class="form-control"
                 />
               </div>
@@ -115,7 +114,7 @@
                 <input
                   type="password"
                   name="password"
-                  placeholder="Password"
+                  placeholder="Password..."
                   class="form-control"
                 />
               </div>
@@ -125,10 +124,6 @@
               </div>
             </form>
           </div>
-
-          {% for message in messages %}
-          <p id="messages">{{message}}</p>
-          {% endfor %}
 
           <div class="mt-4">
             <div class="d-flex justify-content-center links">
