@@ -31,15 +31,8 @@ def registerPage(request):
 def loginPage(request):
 
 	if request.method == 'POST':
-		username = request.POST.get('username')
-		password = request.POST.get('password')
-
-		user = authenticate(request, username=username, password=password)
-	
-		if user is not None:
-			login(request, user)
-			return redirect('home')
-
+		request.POST.get('username')
+		request.POST.get('password')
 	context = {}
 	return render(request, 'store/login.html', context)
 

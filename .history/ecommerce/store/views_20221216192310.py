@@ -35,11 +35,6 @@ def loginPage(request):
 		password = request.POST.get('password')
 
 		user = authenticate(request, username=username, password=password)
-	
-		if user is not None:
-			login(request, user)
-			return redirect('home')
-
 	context = {}
 	return render(request, 'store/login.html', context)
 
