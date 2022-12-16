@@ -38,7 +38,7 @@ def loginPage(request):
 	
 		if user is not None:
 			login(request, user)
-			return redirect('store')
+			return redirect('home')
 
 	context = {}
 	return render(request, 'store/login.html', context)
