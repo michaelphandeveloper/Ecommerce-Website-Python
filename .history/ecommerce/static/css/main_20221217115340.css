@@ -51,7 +51,7 @@ h6 {
   font-size: 14px;
 }
 
-.col-lg-3,
+.col-lg-4,
 .col-lg-6,
 .col-lg-8,
 .col-lg-12 {
@@ -63,7 +63,7 @@ h6 {
 }
 
 .row-image {
-  width: 100px;
+  width: 200px;
 }
 
 .form-field {

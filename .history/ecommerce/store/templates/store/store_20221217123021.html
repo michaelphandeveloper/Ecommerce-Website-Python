@@ -7,16 +7,14 @@
       <h6><strong>{{product.name}}</strong></h6>
       <hr />
 
-      <h4 style="display: inline-block">
-        <strong>${{product.price|floatformat:2}}</strong>
-      </h4>
-
       <button
         data-product="{{product.id}}"
         data-action="add"
         class="btn btn-outline-secondary add-btn update-cart"
       >
         Add to Cart
+      </button>
+      <a class="btn btn-outline-success" href="#">View</a>
     </div>
   </div>
   {% endfor %}

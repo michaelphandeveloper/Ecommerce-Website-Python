@@ -16,7 +16,7 @@ from .utils import cookieCart, cartData, guestOrder
 # Create your views here.
 def registerPage(request):
 	if request.user.is_authenticated:
-		return redirect('store')
+		return redirect('home')
 	else:
 		form = CreateUserForm()
 		if request.method == 'POST':

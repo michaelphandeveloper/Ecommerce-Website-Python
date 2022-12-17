@@ -7,7 +7,6 @@ from django.contrib.auth.forms import UserCreationForm
 
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
-from django.contrib.auth.decorators import login_required
 
 from .models import *
 from .forms import CreateUserForm
@@ -16,21 +15,23 @@ from .utils import cookieCart, cartData, guestOrder
 # Create your views here.
 def registerPage(request):
 	if request.user.is_authenticated:
-		return redirect('store')
+		return redirect('home')
 	else:
 		form = CreateUserForm()
 		if request.method == 'POST':
 			form = CreateUserForm(request.POST)
 			if form.is_valid():
-				form.save()
-				user = form.cleaned_data.get('username')
-				messages.success(request, 'Account was created for ' + user)
+			form.save()
+			user = form.cleaned_data.get('username')
+			messages.success(request, 'Account was created for ' + user)
 
 			return redirect('login')
 
 	context = {'form':form}
 	return render(request, 'store/register.html', context)
 
+
+@unauthenticated_user
 def loginPage(request):
 
 	if request.method == 'POST':
@@ -53,8 +54,6 @@ def logoutUser(request):
 	logout(request)
 	return redirect('login')
 
-
-@login_required(login_url='login')
 def store(request):
 	data = cartData(request)
 	cartItems = data['cartItems']
