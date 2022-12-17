@@ -1,5 +1,7 @@
 import json
 from .models import *
+from django.contrib.auth.decorators import login_required
+
 
 def cookieCart(request):
     try:
@@ -53,6 +55,7 @@ def cartData(request):
         items = cookieData['items']
     return {'cartItems':cartItems, 'order':order, 'items':items}
 
+@login_required(login_url='login')
 def guestOrder(request, data):
     print('User is not logged in')
 

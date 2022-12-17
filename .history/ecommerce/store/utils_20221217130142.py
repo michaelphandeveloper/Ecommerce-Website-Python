@@ -1,5 +1,7 @@
 import json
 from .models import *
+from django.contrib.auth.decorators import login_required
+
 
 def cookieCart(request):
     try:

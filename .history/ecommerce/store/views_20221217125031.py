@@ -5,7 +5,7 @@ import json
 import datetime
 from django.contrib.auth.forms import UserCreationForm
 
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
 
 from .models import *

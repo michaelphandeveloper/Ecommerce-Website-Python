@@ -1,5 +1,7 @@
 import json
 from .models import *
+from django.contrib.auth.decorators import login_required
+
 
 def cookieCart(request):
     try:
@@ -40,12 +42,12 @@ def cookieCart(request):
             pass
     return {'cartItems':cartItems, 'order':order, 'items':items}
 
+@login_required(login_url='login')
 def cartData(request):
     if request.user.is_authenticated:
         customer = request.user.customer
         order, created = Order.objects.get_or_create(customer=customer, complete=False)
         items = order.orderitem_set.all()
-        cartItems = order.get_cart_items
     else:
         cookieData = cookieCart(request)
         cartItems = cookieData['cartItems']

@@ -5,7 +5,7 @@ import json
 import datetime
 from django.contrib.auth.forms import UserCreationForm
 
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
 
 from .models import *
@@ -44,6 +44,12 @@ def loginPage(request):
 		context = {}
 		return render(request, 'store/login.html', context)
 
+def logoutUser(request):
+	logout(request)
+	return redirect('login')
+
+
+@login_required(login_url='login')
 def store(request):
 	data = cartData(request)
 	cartItems = data['cartItems']
@@ -52,6 +58,7 @@ def store(request):
 	context = {'products':products, 'cartItems': cartItems}
 	return render(request, 'store/store.html', context)
 
+@login_required(login_url='login')
 def cart(request):
 	data = cartData(request)
 	cartItems = data['cartItems']
@@ -61,6 +68,7 @@ def cart(request):
 	context = {'items':items, 'order':order, 'cartItems': cartItems}
 	return render(request, 'store/cart.html', context)
 
+@login_required(login_url='login')
 def checkout(request):
 	data = cartData(request)
 	cartItems = data['cartItems']
@@ -96,6 +104,7 @@ def updateItem(request):
 
 	return JsonResponse('Item was added!!', safe=False)
 
+@login_required(login_url='login')
 def processOrder(request):
 	transaction_id = datetime.datetime.now().timestamp()
 	data = json.loads(request.body)
