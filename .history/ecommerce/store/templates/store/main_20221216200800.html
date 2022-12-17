@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 {% load static %}
-
 <html>
   <head>
     <title>Home</title>
@@ -87,7 +86,11 @@
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item active"></li>
+          <li class="nav-item active">
+            <a class="nav-link" href="{% url 'store' %}"
+              >Home <span class="sr-only">(current)</span></a
+            >
+          </li>
         </ul>
         <div class="form-inline my-2 my-lg-0">
           <a href="{% url 'login' %}" class="btn btn-warning">Login</a>
@@ -98,6 +101,11 @@
           <p id="cart-total">{{cartItems}}</p>
         </div>
       </div>
+
+      <span>Hello, </span>
+      <span
+        ><a href="{% url 'login' %}" class="btn btn-warning">Logout</a></span
+      >
     </nav>
 
     <div class="container">

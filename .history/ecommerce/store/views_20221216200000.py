@@ -41,14 +41,13 @@ def loginPage(request):
 			return redirect('store')
 
 		else:
-			messages.info(request, 'Username or Password is incorrect')
+			messages.info{request, 'Username or Password is incorrect'}
 
 	context = {}
 	return render(request, 'store/login.html', context)
 
-def logoutUser(request):
-	logout(request)
-	return redirect('login')
+def logout
+
 
 def store(request):
 	data = cartData(request)

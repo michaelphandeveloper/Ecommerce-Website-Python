@@ -47,7 +47,6 @@ def loginPage(request):
 	return render(request, 'store/login.html', context)
 
 def logoutUser(request):
-	logout(request)
 	return redirect('login')
 
 def store(request):
