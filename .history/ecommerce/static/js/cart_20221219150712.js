@@ -8,7 +8,7 @@ for (i = 0; i < updateBtns.length; i++) {
 
     console.log("user: ", user);
     if (user === "AnonymousUser") {
-      addCookieItem(productId, action);
+      //addCookieItem(productId, action)
     } else {
       updateUserOrder(productId, action);
     }

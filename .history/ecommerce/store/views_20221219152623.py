@@ -78,6 +78,7 @@ def checkout(request):
 
 @login_required(login_url='login')
 def updateItem(request):
+	if request.user.is_authenticated:
 		data = json.loads(request.body)
 		productId = data['productId']
 		action = data['action']
