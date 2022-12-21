@@ -5,7 +5,7 @@ import json
 import datetime
 from django.contrib.auth.forms import UserCreationForm
 
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 
@@ -47,6 +47,10 @@ def loginPage(request):
 
 		context = {}
 		return render(request, 'store/login.html', context)
+
+def logoutUser(request):
+	logout(request)
+	return redirect('store')
 
 def store(request):
 	data = cartData(request)

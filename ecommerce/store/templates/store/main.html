@@ -90,7 +90,12 @@
           <li class="nav-item active"></li>
         </ul>
         <div class="form-inline my-2 my-lg-0">
+        
+          {% if user.is_authenticated %}
+          <span class="hello-msg">Hello, {{request.user}} <a class="hello-msg" href="{% url 'logout' %}"> Logout </a></span>
+          {% else %}
           <a href="{% url 'login' %}" class="btn btn-warning">Login</a>
+          {% endif %}
 
           <a href="{% url 'cart' %}">
             <img id="cart-icon" src="{% static 'images/cart.png' %}" />
