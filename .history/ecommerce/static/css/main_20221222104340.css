@@ -1,5 +1,5 @@
 body {
-  background-color: f3f2ef;
+  background-color: hsl(0, 0%, 98%);
 }
 
 h1,
@@ -40,7 +40,7 @@ h6 {
 }
 
 .bg-dark {
-  background-color: #0a66c2 !important;
+  background-color: #ff6600 !important;
 }
 
 #cart-icon {
@@ -83,7 +83,8 @@ h6 {
 
 .cart-row {
   display: flex;
-  align-items: flex-stretch;
+  align-items: margin-left: auto;
+  margin-right: auto;;
   padding-bottom: 10px;
   margin-bottom: 10px;
   border-bottom: 1px solid #ececec;

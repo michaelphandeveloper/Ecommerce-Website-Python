@@ -1,5 +1,5 @@
 body {
-  background-color: f3f2ef;
+  background-color: hsl(0, 0%, 98%);
 }
 
 h1,
@@ -11,9 +11,12 @@ h6 {
   color: hsl(0, 0%, 30%);
 }
 
+.navbar-brand {
+  color: #000000;
+}
+
 .row {
   margin-top: 30px;
-  margin-bottom: 30px;
 }
 
 .col-lg-2 {
@@ -40,7 +43,7 @@ h6 {
 }
 
 .bg-dark {
-  background-color: #0a66c2 !important;
+  background-color: #ff6600 !important;
 }
 
 #cart-icon {
