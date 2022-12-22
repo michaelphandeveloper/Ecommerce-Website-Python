@@ -3,17 +3,37 @@
   <div class="col-lg-6">
     <div class="box-element" id="form-wrapper">
       <form id="form">
-        <div id="user-info"></div>
+        <div id="user-info">
+          <div class="form-field">
+            <input
+              required
+              class="form-control"
+              type="text"
+              name="name"
+              placeholder="Name.."
+            />
+          </div>
+          <div class="form-field">
+            <input
+              required
+              class="form-control"
+              type="email"
+              name="email"
+              placeholder="Email.."
+            />
+          </div>
+        </div>
 
         <div id="shipping-info">
-          <h3>Shipping Information:</h3>
+          <hr />
+          <p>Shipping Information:</p>
           <hr />
           <div class="form-field">
             <input
               class="form-control"
               type="text"
               name="address"
-              placeholder="Address"
+              placeholder="Address.."
             />
           </div>
           <div class="form-field">
@@ -21,7 +41,7 @@
               class="form-control"
               type="text"
               name="city"
-              placeholder="City"
+              placeholder="City.."
             />
           </div>
           <div class="form-field">
@@ -29,7 +49,7 @@
               class="form-control"
               type="text"
               name="state"
-              placeholder="District"
+              placeholder="State.."
             />
           </div>
           <div class="form-field">
@@ -37,7 +57,7 @@
               class="form-control"
               type="text"
               name="zipcode"
-              placeholder="Ward"
+              placeholder="Zip code.."
             />
           </div>
         </div>
