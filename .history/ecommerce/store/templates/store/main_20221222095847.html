@@ -101,7 +101,7 @@
           <span class="hello-msg">Hello, {{request.user}} </span>
           <a class="btn btn-danger" href="{% url 'logout' %}">Logout</a>
           {% else %}
-          <a href="{% url 'login' %}" class="btn btn-success">Login</a>
+          <a href="{% url 'login' %}" class="btn btn-primary">Login</a>
           {% endif %}
 
           <a href="{% url 'cart' %}">
