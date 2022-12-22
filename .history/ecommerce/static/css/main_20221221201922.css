@@ -19,6 +19,9 @@ h6 {
   margin-block-start: 30px;
 }
 
+.navbar navbar-inverse navbar-static-bottom {
+}
+
 .box-element {
   box-shadow: hsl(0, 0%, 80%) 0 0 16px;
   background-color: #fff;

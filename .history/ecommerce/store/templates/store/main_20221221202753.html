@@ -3,7 +3,7 @@
 
 <style>
   .hello-msg {
-    margin-right: 18px;
+    margin-right
     color: #ffffff;
   }
 </style>
@@ -98,7 +98,9 @@
         </ul>
         <div class="form-inline my-2 my-lg-0">
           {% if user.is_authenticated %}
-          <span class="hello-msg">Hello, {{request.user}} </span>
+          <span class="hello-msg"
+            >Hello, {{request.user}}
+          </span>
           <a class="btn btn-warning" href="{% url 'logout' %}">Logout</a>
           {% else %}
           <a href="{% url 'login' %}" class="btn btn-warning">Login</a>
@@ -137,4 +139,11 @@
 
     <script type="text/javascript" src="{% static 'js/cart.js' %}"></script>
   </body>
+  <footer>
+    <div class="footer" role="navigation">
+      </div>
+        &copy; HVK Shop, 2022.
+      </div>
+    </div>
+  </footer>
 </html>

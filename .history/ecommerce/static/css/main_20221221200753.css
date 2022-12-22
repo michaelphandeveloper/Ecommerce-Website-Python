@@ -11,12 +11,7 @@ h6 {
   color: hsl(0, 0%, 30%);
 }
 
-.row {
-  margin-top: 30px;
-}
-
 .col-lg-2 {
-  margin-block-start: 30px;
 }
 
 .box-element {

@@ -11,12 +11,21 @@ h6 {
   color: hsl(0, 0%, 30%);
 }
 
+.btn {
+  color: ;
+}
+
 .row {
   margin-top: 30px;
 }
 
 .col-lg-2 {
   margin-block-start: 30px;
+}
+
+.footer {
+  align-content: center;
+  background-color: #4f868c !important;
 }
 
 .box-element {

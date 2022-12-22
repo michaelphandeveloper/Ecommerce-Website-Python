@@ -3,7 +3,6 @@
 
 <style>
   .hello-msg {
-    margin-right: 18px;
     color: #ffffff;
   }
 </style>
@@ -98,8 +97,10 @@
         </ul>
         <div class="form-inline my-2 my-lg-0">
           {% if user.is_authenticated %}
-          <span class="hello-msg">Hello, {{request.user}} </span>
-          <a class="btn btn-warning" href="{% url 'logout' %}">Logout</a>
+          <span class="hello-msg"
+            >Hello, {{request.user}}.
+            <a class="btn btn-warning" href="{% url 'logout' %}">Logout</a>
+          </span>
           {% else %}
           <a href="{% url 'login' %}" class="btn btn-warning">Login</a>
           {% endif %}

@@ -12,11 +12,7 @@ h6 {
 }
 
 .row {
-  margin-top: 30px;
-}
-
-.col-lg-2 {
-  margin-block-start: 30px;
+  height: -400px;
 }
 
 .box-element {
